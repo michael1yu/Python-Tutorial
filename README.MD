@@ -3,7 +3,20 @@
 
 ## Running code
 
-Use the following website to run and test code:
+Codecademy course:
+
+[Link to course](https://www.codecademy.com/learn/learn-python)
+
+I think these are the lessons that you should focus on:
+1. [Syntax](https://www.codecademy.com/courses/learn-python/lessons/python-syntax/exercises/print-statements)
+2. [Strings & Console Output](https://www.codecademy.com/courses/learn-python/lessons/strings--console-output/exercises/strings)
+3. [Conditionals & Control Flow](https://www.codecademy.com/courses/learn-python/lessons/conditionals--control-flow/exercises/go-with-the-flow)
+4. [Functions](https://www.codecademy.com/courses/learn-python/lessons/python-functions/exercises/what-good-are-functions)
+5. [Lists and Dictionaries](https://www.codecademy.com/courses/learn-python/lessons/python-lists-and-dictionaries/exercises/introduction-to-lists)
+6. [Loops](https://www.codecademy.com/courses/learn-python/lessons/python-2-loops/exercises/while-youre-here)
+
+</br>
+You can also use the following website to run and test code:
 
 [Online Python Code Runner](https://www.tutorialspoint.com/execute_python_online.php)
 
@@ -11,7 +24,7 @@ To write code, type in the left window. To run the code, click the "Execute" but
 
 </br>
 
-
+- - -
 ## Variables
 
 Variables are things that hold values. It's the same concept as in Math, where you may have "x + 5", and you say that x = 5. "x" is simply a variable that is holding the value 5.
@@ -213,3 +226,124 @@ What's the final value of description?
     <summary>Click for Answer</summary>
     description = "John Smith works at an office and enjoys biking"
 </details>
+
+</br>
+
+- - -
+
+## Conditionals
+
+### **What is a conditional?**
+
+A conditional is something that we use when we want code to only run under certain conditions.
+In Python we have 3 conditionals:
+
+1. if: code runs if a condition is met
+2. elif (aka else if): if the previous condition was not met, we check this condition and run some code if it is met
+3. else: if the previous condition was not met, we run some code
+
+So I've mentioned the word condition a lot, let's look at what that actually means.
+
+### **Conditions**
+
+Conditions are essentially things that we check for. For example, a common condition is you have to be over 18 to vote. The condition there is that they have to be over 18. Here, we see that our conditions are often dealing with comparison between numbers.
+
+Let's look at how we might compare two numbers:
+
+    a == b : a is equal to b
+    a != b : a is not equal to b
+    a < b : a is strictly less than b
+    a <= b : a is less than or equal to b
+    a > b : a is strictly greater than b
+    a >= b : a is greater than or equal to b
+
+Great, now we have an understanding of how we might create our conditions. Let's combine that with the different conditionals (if, elif, else).
+
+### **Conditional Statements**
+
+Let's start with if statements. Let's take a look at a simple if statement
+
+    a = 5
+    b = 6
+    if (a < b):
+        print("Hello")
+
+Here, we have two variables a and b. We then see our if statement where the condition is wrapped by parentheses. Then, we have the code that we want to run if a is less than b. Let's try to generalize this form
+
+    if (...condition...):
+        code
+        that
+        we
+        want
+        to
+        run if condition is true
+
+We can even nest if statements under each other
+
+    if(a < b):
+        print("A was less than B)
+        if(a + 1 < b):
+            print("A + 1 was less than B)
+
+Here we first check if a < b, if that's true, we print "A was less than B". Additionally, if a was less than b, we also check if a + 1 < b., and if that's true, we print "A + 1 was less than B".
+
+
+- - - 
+
+## Functions
+
+Link for reference:
+[Link](https://www.w3schools.com/python/python_functions.asp)
+
+A very important concept is the idea of functions (sometimes called methods). Functions are essentially pieces of code that you can call. If we think of it from a math standpoint, we have might have a function f(x) = x + 1. Here we would call the function f(x) and give it some value for x. So f(5) would return 6. Functions in Python behave exactly the same.
+
+Let's start with some functions that you might be familiar with.
+
+The print function is very common.
+
+    print("Hello!")
+
+This prints out
+
+    "Hello"
+
+As we can see, the print function takes in one argument, the string that you want to print.
+
+Functions can essentially be broken into two components:
+
+1. the function name
+2. the arguments it accepts
+
+</br>
+
+### **Why functions**
+
+Before we look at how to implement functions, let's look at why we want to use functions.
+
+Look at the following code
+
+    x1 = 5
+    y1 = 5
+
+    x2 = 3
+    y2 = 3
+
+    # dist is the euclidian distance
+    dist = (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+
+If we look here, we see that we are finding the distance between two points (x1, y1) and (x2, y2). Now here, it doesn't seem like there is anything to change, but let's consider if we have 500 pairs of points that we want to find the distance between. We don't want to have to write out the euclidian distance formula every single time. Instead, wouldn't it be easier if we had some distance function that accepted 4 arguments
+
+    dist(x1, y1, x2, y2)
+
+and return the distance. So here, we would have some function that has the code to calculate the distance. Let's look at that function next.
+
+
+### **Defining Functions**
+
+Let's first take a look at the dist function before:
+
+    def dist(x1, y1, x2, y2):
+        return (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+
+There's a lot to cover in this example. First, let's look at how this function might fit into our program as a whole:
+

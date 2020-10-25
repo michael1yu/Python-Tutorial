@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.7;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 40em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin-top: 1.7em;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.7em;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1.7em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1.7em 0 1.7em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      font-style: italic;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      background-color: #f0f0f0;
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+    }
+    pre {
+      line-height: 1.5em;
+      padding: 1em;
+      background-color: #f0f0f0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin-top: 1.7em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border-bottom: 1px solid lightgray;
+      padding: 1em 3em 1em 0;
+    }
+    header {
+      margin-bottom: 6em;
+      text-align: center;
+    }
+    nav a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#python-tutorial">Python Tutorial</a>
+<ul>
+<li><a href="#running-code">Running code</a></li>
+<li><a href="#variables">Variables</a>
+<ul>
+<li><a href="#data-types"><strong>Data Types</strong></a></li>
+<li><a href="#assigning-values-to-variables"><strong>Assigning values to variables</strong></a></li>
+<li><a href="#arithmetic-and-string-concatenation"><strong>Arithmetic and String concatenation</strong></a></li>
+</ul></li>
+<li><a href="#functions-aka-methods">Functions (aka Methods)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="python-tutorial">Python Tutorial</h1>
+<h2 id="running-code">Running code</h2>
+<p>Use the following website to run and test code:</p>
+<p><a href="https://www.tutorialspoint.com/execute_python_online.php">Online Python Code Runner</a></p>
+<p>To write code, type in the left window. To run the code, click the “Execute” button in the top right. Output will be displayed in the right window.</p>
+<p></br></p>
+<h2 id="variables">Variables</h2>
+<p>Variables are things that hold values. It’s the same concept as in Math, where you may have “x + 5”, and you say that x = 5. “x” is simply a variable that is holding the value 5.</p>
+<p></br></p>
+<h3 id="data-types"><strong>Data Types</strong></h3>
+<p>As mentioned before, we have variables that hold values. There are various types of values that we can assign to a variable. The most basic types of values that we can store are:</p>
+<ol type="1">
+<li>numbers
+<ul>
+<li>Numbers can be broken into two types:
+<ol type="1">
+<li>ints: integer numbers</li>
+<li>floats: floating point (decimal) numbers</li>
+</ol></li>
+</ul></li>
+<li>strings
+<ul>
+<li>Strings are anything that is wrapped by quotation marks</li>
+<li>ex:
+<ul>
+<li>“Hello”</li>
+<li>“Hello World”</li>
+<li>“High 5”</li>
+</ul></li>
+<li>It’s important to consider that numbers in strings are different from normal numbers
+<ul>
+<li>For example, “5” is different from 5. “5” is a string, but 5 is a number value.</li>
+</ul></li>
+</ul></li>
+<li>booleans
+<ul>
+<li>booleans represent two values, either true or false</li>
+<li>they are especially useful for conditionals (if else statements) that will be covered later</li>
+</ul></li>
+</ol>
+<p>In summary, numbers, strings, and booleans are the most basic data values that can be stored in a variable.</p>
+<p></br></p>
+<h3 id="assigning-values-to-variables"><strong>Assigning values to variables</strong></h3>
+<p>Link for reference: <a href="https://www.w3schools.com/python/python_variables.asp">Link</a></p>
+<p>When we have variables, we need to assign them values</p>
+<p>Let’s say we have a variable x, we want to assign it the value of 5. To do so, we use “=”.</p>
+<pre><code>x = 5</code></pre>
+<p>So now we know how to assign number values. Next, we want to learn how to assign string values. As mentioned before, strings are enclosed by quotation marks. So let’s say we have a variable called name, and we want to assign it the value “John”, we do:</p>
+<pre><code>name = &quot;John&quot;</code></pre>
+<p>Let’s say we want a variable that holds whether someone is in school (where true means they are in school), we would do:</p>
+<pre><code>inSchool = true</code></pre>
+<p>One thing to notice with the last example is how we wrote the variable name. Variable names cannot have any spaces in them. Here are some rules for naming variables:</p>
+<ol type="1">
+<li>a variable name must start with a letter or the underscore character</li>
+<li>a variable name cannot start with a number</li>
+<li>a variable name can only contain letters, underscores, and numbers</li>
+</ol>
+<p>Another important rule is that variable names are case sensitive. So</p>
+<pre><code>xy = 5
+xY = 5</code></pre>
+<p>are two different variables.</p>
+<p>Variables can also be reassigned, which means that we can assign new values to variables and replace their old value. For example</p>
+<pre><code>x = 5
+x = 6</code></pre>
+<p>Here, the final value of x is actually 6. We first give x the value of 5, then we reassign it to store the value of 6. We now have the basic concept of variables and assignment, now let’s see what we can do with variables.</p>
+<p></br></p>
+<h3 id="arithmetic-and-string-concatenation"><strong>Arithmetic and String concatenation</strong></h3>
+<p>For variables that store numbers, we can do arithmetic operations with them. The following operations are supported</p>
+<pre><code>+ : add
+- : substract
+* : multiply
+/ : divide
+% : modulus, returns the remainder of a division operation
+** : exponent</code></pre>
+<p>Here are some examples of the above operations Note that the text on the same line following the pound sign (#) are comments. Comments are text that is not run, it is simply just plain text that can be used within your code to add any comments that might explain logic, etc.</p>
+<pre><code>x = 5
+y = 6
+
+# we assign variable z to the value of x + y, so z equals 11
+z = x + y 
+
+# we reassign z to the value of x - y, so z equals -1
+z = x - y
+
+# we reassign z to the value of x * y, so z equals 30
+z = x * y
+
+# we reassign z to the value of x / y, so z equals 0.83333333333
+z = x / y
+
+# we reassign z to the value of x % y, so z equals 5. This is because y goes into x 0 times, and has a remainder of 5.
+z = x % y
+
+# we reassign z to the value of x ^ y, so z equals 15625
+z = x ** y
+
+# Note, arithmetic operations can occur by just using the values, we don&#39;t need to use variables
+# here we reassign z to the value of 1 + 2, so z equals 3
+z = 1 + 2</code></pre>
+<p>Another important consideration is to think about order of operations. Just like in math, we can use parenthesis to indicate what things might be calculated first.</p>
+<pre><code>x = (5 + 5) * 2</code></pre>
+<p>Here, x ends up equaling 20, not 15.</p>
+<p>Another thing to consider is that whatever is to the right of the equals sign is going to occur first. So the right of the equal sign will be calculated and then assigned to the variable on the left side. This means that we can do some modification of a variable like</p>
+<pre><code>x = 5
+x = x + 1</code></pre>
+<p>Here, the final value of x is 6. If we look at the second line, we are doing the following things in order:</p>
+<ol type="1">
+<li>calculating x + 1, x was assigned to 5, so we are essentially doing 5 + 1</li>
+<li>assigning the previous calculated sum to x, so 6 is assigned to x</li>
+</ol>
+<p>We can do other things like</p>
+<pre><code>x = 3
+x = x + x + x  
+
+y = 5
+y = 2 * y  </code></pre>
+<p>In the first example with x, x ends up being 9. In the second example with y, y ends up being 10.</p>
+<p></br></p>
+<p>So now we have an idea of some basic operations that we can do between variables that store numbers. Now let’s consider strings. Sometimes, we may want to add two string together. For example, we may have</p>
+<pre><code>first = &quot;John&quot;
+last = &quot;Smith&quot;</code></pre>
+<p>and we want to generate a new variable called fullName that stores someones full name. To do so, we can concatenate the first variable and the last variable. To concatenate, we use the <strong>+</strong> symbol.</p>
+<pre><code>fullName = first + last</code></pre>
+<p>fullName now holds the string value: “JohnSmith” So we’re almost there, but we want to have a space between “John” and “Smith”. To do so, we can just use our <strong>+</strong> operation.</p>
+<pre><code>fullName = first + &quot; &quot; + last</code></pre>
+<p>fullName now holds the string value: “John Smith” What we essentially did was similar to what we did before with the numbers. For example we might have</p>
+<pre><code>x = 5
+y = 2
+z = x + 1 + y</code></pre>
+<p>We are just directly adding the value. So when we add the space string " ", we are just adding a string value</p>
+<pre><code>major = &quot;math&quot;
+degree = &quot;B.S.&quot;
+diploma = degree + &quot; in &quot; + major</code></pre>
+<p>Here, diploma has a final value of “B.S. in math”</p>
+<p>Now we’ve covered some basic operations for string and numbers. Let’s test that knowledge.</p>
+<p></br></p>
+<pre><code>x = 5
+y = 6
+z = (x + y - 5) % x</code></pre>
+<p>What’s the final value of z?</p>
+<details>
+<summary>
+Click for Answer
+</summary>
+z = 1
+</details>
+<p></br></p>
+<pre><code>name = &quot;John Smith&quot;
+job = &quot;office&quot;
+hobby = &quot;biking&quot;
+description = name + &quot; works at an &quot; + job + &quot; and enjoys &quot; + hobby</code></pre>
+What’s the final value of description?
+<details>
+<summary>
+Click for Answer
+</summary>
+description = “John Smith works at an office and enjoys biking”
+</details>
+<p></br></p>
+<h2 id="functions-aka-methods">Functions (aka Methods)</h2>
+<p>A very important concept is the idea of functions. Functions are essentially pieces of code that you can call. If we think of it from a math standpoint, we have might have a function f(x) = x + 1. Here we would call the function f(x) and give it some value for x. So f(5) would return 6. Functions in Python behave exactly the same.</p>
+<p>Let’s start with some functions that you might be familiar with.</p>
+<p>The print function is very common.</p>
+<pre><code>print(&quot;Hello!&quot;)</code></pre>
+<p>This prints out</p>
+<pre><code>&quot;Hello&quot;</code></pre>
+<p>As we can see, the print function takes in one argument, the string that you want to print.</p>
+</body>
+</html>
