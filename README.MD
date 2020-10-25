@@ -531,7 +531,7 @@ This may seem confusing but let's think back to our mathematical functions. In m
 
 This means that the function f will now return 5 + 1.
 
-You might also notice that in our function code, we have this keyword "return". This represent the value that we want to return back to whoever called the function. So when we did
+You might also notice that in our function code, we have this keyword "return". This represents the value that we want to return back to whoever called the function. So when we did
 
     distance = dist(1, 1, 5, 5)
 
