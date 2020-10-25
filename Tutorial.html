@@ -136,16 +136,38 @@
 <li><a href="#assigning-values-to-variables"><strong>Assigning values to variables</strong></a></li>
 <li><a href="#arithmetic-and-string-concatenation"><strong>Arithmetic and String concatenation</strong></a></li>
 </ul></li>
-<li><a href="#functions-aka-methods">Functions (aka Methods)</a></li>
+<li><a href="#conditionals">Conditionals</a>
+<ul>
+<li><a href="#what-is-a-conditional"><strong>What is a conditional?</strong></a></li>
+<li><a href="#conditions"><strong>Conditions</strong></a></li>
+<li><a href="#conditional-statements"><strong>Conditional Statements</strong></a></li>
+</ul></li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#why-functions"><strong>Why functions</strong></a></li>
+<li><a href="#defining-functions"><strong>Defining Functions</strong></a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
 <h1 id="python-tutorial">Python Tutorial</h1>
 <h2 id="running-code">Running code</h2>
-<p>Use the following website to run and test code:</p>
+<p>Codecademy course:</p>
+<p><a href="https://www.codecademy.com/learn/learn-python">Link to course</a></p>
+<p>I think these are the lessons that you should focus on:</p>
+<ol type="1">
+<li><a href="https://www.codecademy.com/courses/learn-python/lessons/python-syntax/exercises/print-statements">Syntax</a></li>
+<li><a href="https://www.codecademy.com/courses/learn-python/lessons/strings--console-output/exercises/strings">Strings &amp; Console Output</a></li>
+<li><a href="https://www.codecademy.com/courses/learn-python/lessons/conditionals--control-flow/exercises/go-with-the-flow">Conditionals &amp; Control Flow</a></li>
+<li><a href="https://www.codecademy.com/courses/learn-python/lessons/python-functions/exercises/what-good-are-functions">Functions</a></li>
+<li><a href="https://www.codecademy.com/courses/learn-python/lessons/python-lists-and-dictionaries/exercises/introduction-to-lists">Lists and Dictionaries</a></li>
+<li><a href="https://www.codecademy.com/courses/learn-python/lessons/python-2-loops/exercises/while-youre-here">Loops</a></li>
+</ol>
+<p></br> You can also use the following website to run and test code:</p>
 <p><a href="https://www.tutorialspoint.com/execute_python_online.php">Online Python Code Runner</a></p>
 <p>To write code, type in the left window. To run the code, click the “Execute” button in the top right. Output will be displayed in the right window.</p>
 <p></br></p>
+<hr />
 <h2 id="variables">Variables</h2>
 <p>Variables are things that hold values. It’s the same concept as in Math, where you may have “x + 5”, and you say that x = 5. “x” is simply a variable that is holding the value 5.</p>
 <p></br></p>
@@ -299,13 +321,282 @@ Click for Answer
 description = “John Smith works at an office and enjoys biking”
 </details>
 <p></br></p>
-<h2 id="functions-aka-methods">Functions (aka Methods)</h2>
-<p>A very important concept is the idea of functions. Functions are essentially pieces of code that you can call. If we think of it from a math standpoint, we have might have a function f(x) = x + 1. Here we would call the function f(x) and give it some value for x. So f(5) would return 6. Functions in Python behave exactly the same.</p>
+<hr />
+<h2 id="conditionals">Conditionals</h2>
+<p>Link for reference: <a href="https://www.w3schools.com/python/python_conditions.asp">Link</a></p>
+<h3 id="what-is-a-conditional"><strong>What is a conditional?</strong></h3>
+<p>A conditional is something that we use when we want code to only run under certain conditions. In Python we have 3 conditionals:</p>
+<ol type="1">
+<li>if: code runs if a condition is met</li>
+<li>elif (aka else if): if the previous condition was not met, we check this condition and run some code if it is met</li>
+<li>else: if the previous condition was not met, we run some code</li>
+</ol>
+<p>So I’ve mentioned the word condition a lot, let’s look at what that actually means.</p>
+<h3 id="conditions"><strong>Conditions</strong></h3>
+<p>Conditions are essentially things that we check for. For example, a common condition is you have to be over 18 to vote. The condition there is that they have to be over 18. Here, we see that our conditions are often dealing with comparison between numbers.</p>
+<p>Let’s look at how we might compare two numbers:</p>
+<pre><code>a == b : a is equal to b
+a != b : a is not equal to b
+a &lt; b : a is strictly less than b
+a &lt;= b : a is less than or equal to b
+a &gt; b : a is strictly greater than b
+a &gt;= b : a is greater than or equal to b</code></pre>
+<p>Great, now we have an understanding of how we might create our conditions. Let’s combine that with the different conditionals (if, elif, else).</p>
+<h3 id="conditional-statements"><strong>Conditional Statements</strong></h3>
+<p>Let’s start with if statements. Let’s take a look at a simple if statement</p>
+<pre><code>a = 5
+b = 6
+if (a &lt; b):
+    print(&quot;Hello&quot;)</code></pre>
+<p>Here, we have two variables a and b. We then see our if statement where the condition is wrapped by parentheses. Then, we have the code that we want to run if a is less than b. Let’s try to generalize this form</p>
+<pre><code>if (...condition...):
+    code
+    that
+    we
+    want
+    to
+    run if condition is true</code></pre>
+<p>We can even nest if statements under each other</p>
+<pre><code>if(a &lt; b):
+    print(&quot;A was less than B)
+    if(a + 1 &lt; b):
+        print(&quot;A + 1 was less than B)</code></pre>
+<p>Here we first check if a &lt; b, if that’s true, we print “A was less than B”. Additionally, if a was less than b, we also check if a + 1 &lt; b., and if that’s true, we print “A + 1 was less than B”.</p>
+<p>Now that we have the if statement down, let’s add the else statement. It’s important to understand that the else statement needs to follow an if statement.</p>
+<pre><code>if (a &lt; b):
+    print(&quot;A is less than B&quot;)
+else:
+    print(&quot;A is not less than B&quot;)</code></pre>
+<p>The biggest thing to notice is that the else statementr does not have an condition. Instead, thinking about it as the negative of the condition in the if statement. Let’s generalize this like we did before with the if statement</p>
+<pre><code>if (...condition...):
+    code
+    to
+    run
+    if condition is true
+else:
+    code
+    to
+    run
+    if condition is false</code></pre>
+<p>Once again, we can nest if and else statements</p>
+<pre><code>if(a &lt; b):
+    print(&quot;A &lt; B&quot;)
+else:
+    if(a == b):
+        print(&quot;A == B&quot;)
+    else:
+        print(&quot;A &gt; B&quot;)</code></pre>
+<p>Here, we see a conditional that first checks if a &lt; b. Then if it isn’t, it checks if a == b, and if that is not true, we know that since a &lt; b and a == b are both false, then a &gt; b.</p>
+<p>Great, now the only issue that we have with the else statement, is that it does not accept any conditions. As we saw with the previous example, we had to add a nested if statement under the else to check if a == b. What if we could have an else and have it also check for a condition, we can do this using elif.</p>
+<pre><code>if(a &lt; b):
+    print(&quot;A &lt; B&quot;)
+elif(a == b):
+    print(&quot;A == B&quot;)
+else:
+    print(&quot;A &gt; B&quot;)</code></pre>
+<p>As we can see, we are able to specifically check for the condition a == b in addition to have the else there. For else, we can only have one else statement. However, for elif, we can have mulitple.</p>
+<pre><code>if(a &lt; b):
+    print(&quot;A &lt; B&quot;)
+elif(a == b):
+    print(&quot;A == B&quot;)
+elif(a + 1 == b):
+    print(&quot;A + 1 == B&quot;)
+else:
+    print(&quot;A &gt; B&quot;)</code></pre>
+<p>Now what happens if we want to test multiple conditions at once, or if we want to do something only if some conditions are not met?</p>
+<p>This is where three keywords come in:</p>
+<pre><code>and
+or
+not</code></pre>
+<p>Let’s discuss the first keyword. “and” is used when we want to check if a set of conditions are all met.</p>
+<pre><code>if(a &lt; b and a != 5):
+    print(&quot;A &lt; B and A != 5&quot;)</code></pre>
+<p>Here, we see that “A &lt; B and A != 5” will only get printed if the two conditions are met. So if a &lt; b but a == 5, nothing will be printed.</p>
+<p>Now, let’s discuss the second keyword. “or” is used when we want to check if at least one condition in a set of conditions are met.</p>
+<pre><code>if(a &lt; b or a != 5):
+    print(&quot;A &lt; B or A != 5&quot;)</code></pre>
+<p>Here, we see that “A &lt; B or A != 5” will only get printed if at least one condition is met. So if a &lt; b but a == 5, it will still get printed because the condition a &lt; b is met.</p>
+<p>Lastly, let’s discuss the last keyword. “not” is used when we want to check if conditions are not met.</p>
+<pre><code>if not(a == 5):
+    print(&quot;A is not 5&quot;)</code></pre>
+<p>Here, we see that we have the condition a == 5, and we are only going to print “A is not 5” if the condition a == 5 is not met. We can combine this with and &amp; or.</p>
+<pre><code>if not(a &lt; b and a != 5):
+    print(&quot;A &gt; B or a == 5)</code></pre>
+<p>Here, we see that if either condition is not met, we will print something. The trick for understand conditions when “not” is used is think about the conditions as the following:</p>
+<pre><code>not(condition_a and condition_b) 
+is the same as 
+not(condition_a) or not(condition_b)</code></pre>
+<p>So with the previous example we can think about it as</p>
+<pre><code>not(a &lt; b and a != 5) 
+is the same as 
+not(a &lt; b) or not(a != 5)</code></pre>
+<p>Let’s test some conditionals</p>
+<pre><code>if(a &lt; 60):
+    print(&quot;F&quot;)
+elif(a &lt; 70):
+    print(&quot;D&quot;)
+elif(a &lt; 80):
+    print(&quot;C&quot;)
+elif(a &lt; 90):
+    print(&quot;B&quot;)
+else
+    print(&quot;A&quot;)</code></pre>
+What is printed if a = 50?
+<details>
+<summary>
+Click for Answer
+</summary>
+F
+</details>
+</br> What is printed if a = 65?
+<details>
+<summary>
+Click for Answer
+</summary>
+D
+</details>
+</br> What is printed if a = 75?
+<details>
+<summary>
+Click for Answer
+</summary>
+C
+</details>
+</br> What is printed if a = 85?
+<details>
+<summary>
+Click for Answer
+</summary>
+B
+</details>
+</br> What is printed if a = 95?
+<details>
+<summary>
+Click for Answer
+</summary>
+A
+</details>
+</br> What is printed if a = 200?
+<details>
+<summary>
+Click for Answer
+</summary>
+A
+</details>
+<p></br></p>
+<hr />
+<h2 id="functions">Functions</h2>
+<p>Link for reference: <a href="https://www.w3schools.com/python/python_functions.asp">Link</a></p>
+<p>A very important concept is the idea of functions (sometimes called methods). Functions are essentially pieces of code that you can call. If we think of it from a math standpoint, we have might have a function f(x) = x + 1. Here we would call the function f(x) and give it some value for x. So f(5) would return 6. Functions in Python behave exactly the same.</p>
 <p>Let’s start with some functions that you might be familiar with.</p>
 <p>The print function is very common.</p>
 <pre><code>print(&quot;Hello!&quot;)</code></pre>
 <p>This prints out</p>
 <pre><code>&quot;Hello&quot;</code></pre>
 <p>As we can see, the print function takes in one argument, the string that you want to print.</p>
+<p>Functions can essentially be broken into two components:</p>
+<ol type="1">
+<li>the function name</li>
+<li>the arguments it accepts</li>
+</ol>
+<p></br></p>
+<h3 id="why-functions"><strong>Why functions</strong></h3>
+<p>Before we look at how to implement functions, let’s look at why we want to use functions.</p>
+<p>Look at the following code</p>
+<pre><code>x1 = 5
+y1 = 5
+
+x2 = 3
+y2 = 3
+
+# dist is the euclidian distance
+dist = (((x2 - x1)**2) + ((y2 - y1)**2))**0.5</code></pre>
+<p>If we look here, we see that we are finding the distance between two points (x1, y1) and (x2, y2). Now here, it doesn’t seem like there is anything to change, but let’s consider if we have 500 pairs of points that we want to find the distance between. We don’t want to have to write out the euclidian distance formula every single time. Instead, wouldn’t it be easier if we had some distance function that accepted 4 arguments</p>
+<pre><code>dist(x1, y1, x2, y2)</code></pre>
+<p>and return the distance. So here, we would have some function that has the code to calculate the distance. Let’s look at that function next.</p>
+<h3 id="defining-functions"><strong>Defining Functions</strong></h3>
+<p>Let’s first take a look at the dist function before:</p>
+<pre><code>def dist(x1, y1, x2, y2):
+    return (((x2 - x1)**2) + ((y2 - y1)**2))**0.5</code></pre>
+<p>There’s a lot to cover in this example. First, let’s look at how this function might fit into our program as a whole:</p>
+<pre><code>def dist(x1, y1, x2, y2):
+    return (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+
+def main():
+    distance = dist(1, 1, 5, 5)</code></pre>
+<p>Here, the function main() is what is actually run by Python. So whenever you run a Python program, it will run what was in the main() function.</p>
+<p>So the main() function is first going to get the distance between (1,1) and (5,5) by calling the function dist(x1, y1, x2, y2). You’ll notice that we called dist by doing</p>
+<pre><code>dist(1,1,5,5)</code></pre>
+<p>When we actually look at the dist function after calling it, the variables in dist get the values we passed to the dist function</p>
+<pre><code>x1 = 1, y1 = 1, x2 = 5, y2 = 5</code></pre>
+<p>This may seem confusing but let’s think back to our mathematical functions. In math we have some function f(x) = x + 1. We don’t know the value of x, but we can pass the value of x to function f by doing</p>
+<pre><code>f(5)</code></pre>
+<p>This means that the function f will now return 5 + 1.</p>
+<p>You might also notice that in our function code, we have this keyword “return”. This represent the value that we want to return back to whoever called the function. So when we did</p>
+<pre><code>distance = dist(1, 1, 5, 5)</code></pre>
+<p>what is happening is</p>
+<pre><code>dist function is called =&gt; the distance is calculated =&gt; the distance is returned and assigned to the variable called distance</code></pre>
+<p>The best way to think about it is that whatever is returned essentially replaces where we called the function. So with our example</p>
+<pre><code>distance = dist(1, 1, 5, 5)</code></pre>
+<p>dist returns 5.656 (with more digits). So in our head we can imagine that 5.656 replaces “dist(1, 1, 5, 5)” so that now</p>
+<pre><code>distance = 5.656</code></pre>
+<p>So let’s say we wanted to multiple that distance by 2, we might do</p>
+<pre><code>distance = 2 * 5.656</code></pre>
+<p>And with what I just mentioned where whatever is returned replaces “dist(1,1,5,5)”, we could instead do</p>
+<pre><code>distance = 2 * dist(1,1,5,5)</code></pre>
+<p>and achieve the same result.</p>
+<p>Now that we know a bit about functions, why don’t we try to define a general form</p>
+<p>Defining a function</p>
+<pre><code>def function_name(arg1, arg2, arg3, ...):
+    code
+    that
+    we
+    want
+    to run
+    when the function is called</code></pre>
+<p>Calling a function</p>
+<pre><code>function_name(value1, value2, value3, ...)</code></pre>
+<p>Now with the “return” keyword, we only use it when we actually want to return a value. Sometimes we may not want to return anything, and instead we want to just run some code. For example</p>
+<pre><code>def printName(name):
+    print(name)</code></pre>
+<p>In the above function, when the function is called, we will print whatever string is passed to it. When I say something is “passed” to a function, I mean the arguments/parameters that are in the parentheses</p>
+<pre><code>printName(&quot;John&quot;)</code></pre>
+<p>Here we are passing “John” to the printName function.</p>
+<p>Let’s test some knowledge for functions</p>
+<p></br></p>
+<pre><code>def sum(num1, num2):
+    return num1 + num2</code></pre>
+<p>What is the value of a in</p>
+<pre><code>a = sum(1,5)</code></pre>
+<details>
+<summary>
+Click for Answer
+</summary>
+a = 6
+</details>
+<p></br></p>
+<p>What is the value of a in</p>
+<pre><code>a = sum(1,5) + sum(5,10)</code></pre>
+<details>
+<summary>
+Click for Answer
+</summary>
+a = 21
+</details>
+<p></br></p>
+<pre><code>def isLess(num1, num2):
+    return num1 &lt; num2</code></pre>
+<p>What is printed if a = 5 and b = 6 in</p>
+<pre><code>if(isLess(a, b)):
+    print(&quot;A is less than B&quot;)
+else:
+    print(&quot;A is not less than B&quot;)</code></pre>
+<details>
+<summary>
+Click for Answer
+</summary>
+“A is less than B”
+</details>
+<p>Notice for the above example, we actually used the return value of isLess as our condition. How does this work? num1 &lt; num2 is true if num1 is less than num2. As a result, isLess return true if num1 &lt; num2. So the if statement is checking the return value of isLess, and will print “A is less than B” if isLess returns true.</p>
 </body>
 </html>

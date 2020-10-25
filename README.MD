@@ -8,6 +8,7 @@ Codecademy course:
 [Link to course](https://www.codecademy.com/learn/learn-python)
 
 I think these are the lessons that you should focus on:
+
 1. [Syntax](https://www.codecademy.com/courses/learn-python/lessons/python-syntax/exercises/print-statements)
 2. [Strings & Console Output](https://www.codecademy.com/courses/learn-python/lessons/strings--console-output/exercises/strings)
 3. [Conditionals & Control Flow](https://www.codecademy.com/courses/learn-python/lessons/conditionals--control-flow/exercises/go-with-the-flow)
@@ -16,6 +17,7 @@ I think these are the lessons that you should focus on:
 6. [Loops](https://www.codecademy.com/courses/learn-python/lessons/python-2-loops/exercises/while-youre-here)
 
 </br>
+
 You can also use the following website to run and test code:
 
 [Online Python Code Runner](https://www.tutorialspoint.com/execute_python_online.php)
@@ -28,7 +30,6 @@ To write code, type in the left window. To run the code, click the "Execute" but
 ## Variables
 
 Variables are things that hold values. It's the same concept as in Math, where you may have "x + 5", and you say that x = 5. "x" is simply a variable that is holding the value 5.
-
 
 </br>
 
@@ -199,9 +200,7 @@ Here, diploma has a final value of "B.S. in math"
 
 Now we've covered some basic operations for string and numbers. Let's test that knowledge.
 
-
 </br>
-
 
     x = 5
     y = 6
@@ -232,6 +231,9 @@ What's the final value of description?
 - - -
 
 ## Conditionals
+
+Link for reference:
+[Link](https://www.w3schools.com/python/python_conditions.asp)
 
 ### **What is a conditional?**
 
@@ -287,6 +289,166 @@ We can even nest if statements under each other
 
 Here we first check if a < b, if that's true, we print "A was less than B". Additionally, if a was less than b, we also check if a + 1 < b., and if that's true, we print "A + 1 was less than B".
 
+Now that we have the if statement down, let's add the else statement.
+It's important to understand that the else statement needs to follow an if statement.
+
+    if (a < b):
+        print("A is less than B")
+    else:
+        print("A is not less than B")
+
+The biggest thing to notice is that the else statementr does not have an condition. Instead, thinking about it as the negative of the condition in the if statement. Let's generalize this like we did before with the if statement
+
+    if (...condition...):
+        code
+        to
+        run
+        if condition is true
+    else:
+        code
+        to
+        run
+        if condition is false
+
+Once again, we can nest if and else statements
+
+    if(a < b):
+        print("A < B")
+    else:
+        if(a == b):
+            print("A == B")
+        else:
+            print("A > B")
+
+Here, we see a conditional that first checks if a < b. Then if it isn't, it checks if a == b, and if that is not true, we know that since a < b and a == b are both false, then a > b.
+
+Great, now the only issue that we have with the else statement, is that it does not accept any conditions. As we saw with the previous example, we had to add a nested if statement under the else to check if a == b. What if we could have an else and have it also check for a condition, we can do this using elif.
+
+    if(a < b):
+        print("A < B")
+    elif(a == b):
+        print("A == B")
+    else:
+        print("A > B")
+
+As we can see, we are able to specifically check for the condition a == b in addition to have the else there. For else, we can only have one else statement. However, for elif, we can have mulitple.
+
+    if(a < b):
+        print("A < B")
+    elif(a == b):
+        print("A == B")
+    elif(a + 1 == b):
+        print("A + 1 == B")
+    else:
+        print("A > B")
+
+Now what happens if we want to test multiple conditions at once, or if we want to do something only if some conditions are not met?
+
+This is where three keywords come in:
+
+    and
+    or
+    not
+
+Let's discuss the first keyword. "and" is used when we want to check if a set of conditions are all met.
+
+    if(a < b and a != 5):
+        print("A < B and A != 5")
+
+Here, we see that "A < B and A != 5" will only get printed if the two conditions are met. So if a < b but a == 5, nothing will be printed.
+
+Now, let's discuss the second keyword. "or" is used when we want to check if at least one condition in a set of conditions are met.
+
+    if(a < b or a != 5):
+        print("A < B or A != 5")
+
+Here, we see that "A < B or A != 5" will only get printed if at least one condition is met. So if a < b but a == 5, it will still get printed because the condition a < b is met.
+
+Lastly, let's discuss the last keyword. "not" is used when we want to check if conditions are not met.
+
+    if not(a == 5):
+        print("A is not 5")
+
+Here, we see that we have the condition a == 5, and we are only going to print "A is not 5" if the condition a == 5 is not met.
+We can combine this with and & or.
+
+    if not(a < b and a != 5):
+        print("A > B or a == 5)
+
+Here, we see that if either condition is not met, we will print something. The trick for understand conditions when "not" is used is think about the conditions as the following:
+
+    not(condition_a and condition_b) 
+    is the same as 
+    not(condition_a) or not(condition_b)
+
+So with the previous example we can think about it as
+
+    not(a < b and a != 5) 
+    is the same as 
+    not(a < b) or not(a != 5)
+
+
+Let's test some conditionals
+
+    if(a < 60):
+        print("F")
+    elif(a < 70):
+        print("D")
+    elif(a < 80):
+        print("C")
+    elif(a < 90):
+        print("B")
+    else
+        print("A")
+
+
+What is printed if a = 50?
+<details>
+    <summary>Click for Answer</summary>
+    F
+</details>
+
+ </br>
+
+What is printed if a = 65?
+<details>
+    <summary>Click for Answer</summary>
+    D
+</details>
+
+ </br>
+
+What is printed if a = 75?
+<details>
+    <summary>Click for Answer</summary>
+    C
+</details>
+
+ </br>
+
+What is printed if a = 85?
+<details>
+    <summary>Click for Answer</summary>
+    B
+</details>
+
+ </br>
+
+What is printed if a = 95?
+<details>
+    <summary>Click for Answer</summary>
+    A
+</details>
+
+ </br>
+
+What is printed if a = 200?
+<details>
+    <summary>Click for Answer</summary>
+    A
+</details>
+
+</br>
 
 - - - 
 
@@ -347,3 +509,125 @@ Let's first take a look at the dist function before:
 
 There's a lot to cover in this example. First, let's look at how this function might fit into our program as a whole:
 
+    def dist(x1, y1, x2, y2):
+        return (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+
+    def main():
+        distance = dist(1, 1, 5, 5)
+
+Here, the function main() is what is actually run by Python. So whenever you run a Python program, it will run what was in the main() function.
+
+So the main() function is first going to get the distance between (1,1) and (5,5) by calling the function dist(x1, y1, x2, y2). You'll notice that we called dist by doing
+
+    dist(1,1,5,5)
+
+When we actually look at the dist function after calling it, the variables in dist get the values we passed to the dist function
+
+    x1 = 1, y1 = 1, x2 = 5, y2 = 5
+
+This may seem confusing but let's think back to our mathematical functions. In math we have some function f(x) = x + 1. We don't know the value of x, but we can pass the value of x to function f by doing
+
+    f(5)
+
+This means that the function f will now return 5 + 1.
+
+You might also notice that in our function code, we have this keyword "return". This represent the value that we want to return back to whoever called the function. So when we did
+
+    distance = dist(1, 1, 5, 5)
+
+what is happening is
+
+    dist function is called => the distance is calculated => the distance is returned and assigned to the variable called distance
+
+The best way to think about it is that whatever is returned essentially replaces where we called the function.
+So with our example
+
+    distance = dist(1, 1, 5, 5)
+
+dist returns 5.656 (with more digits). So in our head we can imagine that 5.656 replaces "dist(1, 1, 5, 5)" so that now
+
+    distance = 5.656
+
+So let's say we wanted to multiple that distance by 2, we might do
+
+    distance = 2 * 5.656
+
+And with what I just mentioned where whatever is returned replaces "dist(1,1,5,5)", we could instead do
+
+    distance = 2 * dist(1,1,5,5)
+
+and achieve the same result.
+
+Now that we know a bit about functions, why don't we try to define a general form
+
+Defining a function
+
+    def function_name(arg1, arg2, arg3, ...):
+        code
+        that
+        we
+        want
+        to run
+        when the function is called
+
+Calling a function
+
+    function_name(value1, value2, value3, ...)
+
+Now with the "return" keyword, we only use it when we actually want to return a value. Sometimes we may not want to return anything, and instead we want to just run some code. For example
+
+    def printName(name):
+        print(name)
+
+In the above function, when the function is called, we will print whatever string is passed to it. When I say something is "passed" to a function, I mean the arguments/parameters that are in the parentheses
+
+    printName("John")
+
+Here we are passing "John" to the printName function.
+
+Let's test some knowledge for functions
+
+</br>
+
+    def sum(num1, num2):
+        return num1 + num2
+
+What is the value of a in
+    
+    a = sum(1,5)
+
+<details>
+    <summary>Click for Answer</summary>
+    a = 6
+</details>
+
+</br>
+
+What is the value of a in
+
+    a = sum(1,5) + sum(5,10)
+
+<details>
+    <summary>Click for Answer</summary>
+    a = 21
+</details>
+
+</br>
+
+    def isLess(num1, num2):
+        return num1 < num2
+
+What is printed if a = 5 and b = 6 in
+
+    if(isLess(a, b)):
+        print("A is less than B")
+    else:
+        print("A is not less than B")
+
+<details>
+    <summary>Click for Answer</summary>
+    "A is less than B"
+</details>
+
+Notice for the above example, we actually used the return value of isLess as our condition. How does this work?
+num1 < num2 is true if num1 is less than num2. As a result, isLess return true if num1 < num2. So the if statement is checking the return value of isLess, and will print "A is less than B" if isLess returns true.
