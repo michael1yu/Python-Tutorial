@@ -630,4 +630,4 @@ What is printed if a = 5 and b = 6 in
 </details>
 
 Notice for the above example, we actually used the return value of isLess as our condition. How does this work?
-num1 < num2 is true if num1 is less than num2. As a result, isLess return true if num1 < num2. So the if statement is checking the return value of isLess, and will print "A is less than B" if isLess returns true.
+num1 < num2 is true if num1 is less than num2. As a result, isLess returns true if num1 < num2. So the if statement is checking the return value of isLess, and will print "A is less than B" if isLess returns true.
